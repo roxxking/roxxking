@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roxx</title>
+    <style>
+        body {
+            margin: auto;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow: auto;
+            background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            color: white;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        .wave {
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 1000% 1000% 0 0;
+            position: fixed;
+            width: 200%;
+            height: 12em;
+            animation: wave 10s -3s linear infinite;
+            transform: translate3d(0, 0, 0);
+            opacity: 0.8;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .wave:nth-of-type(2) {
+            bottom: -1.25em;
+            animation: wave 18s linear reverse infinite;
+            opacity: 0.8;
+        }
+
+        .wave:nth-of-type(3) {
+            bottom: -2.5em;
+            animation: wave 20s -1s reverse infinite;
+            opacity: 0.9;
+        }
+
+        @keyframes wave {
+            2%, 100% {
+                transform: translateX(1);
+            }
+
+            25%, 75% {
+                transform: translateX(-25%);
+            }
+
+            50% {
+                transform: translateX(-50%);
+            }
+        }
+
+        p {
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .school-label,
+        .church-label {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-container {
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .school-image,
+        .church-image,
+        .teacher-image {
+            width: 40%;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .church-info {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+
+        .school-website-btn {
+            background-color: #fff;
+            color: #333;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .school-website-btn:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <p>I am Imtiaz, currently navigating the academic waters of class 10. Delving into the realms of HTML, I present to you this humble code snippet crafted for the purposes of rigorous testing. With an eye toward the horizon, I eagerly anticipate the evolution of my web endeavors, poised to embark on the creation of future webpages.</p>
+    <div class="image-container">
+        <img class="school-image" src="https://content3.jdmagicbox.com/comp/dhubri/s7/9999p3662.3662.220319211401.d9s7/catalogue/bethel-baptist-mission-school-dhubri-ho-dhubri-schools-6ak2khwadb.jpg" alt="My School" loading="lazy">
+        <div class="school-label">My School</div>
+    </div>
+    <div class="image-container">
+        <a href="https://bbms.net.in/images/home-image/home-slider/bethel-3.webp" target="_blank">
+            <img class="church-image" src="https://bbms.net.in/images/home-image/home-slider/bethel-3.webp" alt="Our School Church" loading="lazy">
+        </a>
+        <div class="church-label">Our School Church</div>
+    </div>
+    <div class="church-info">
+        <p><strong>What is the Christian Church?</strong></p>
+        <p>The early Christian church had no buildings, at least not in the sense of what we would consider church buildings today. First-century Christians were often persecuted and, as a result, often met in secret, usually in homes. As the influence of Christianity spread, eventually buildings dedicated to worship were established and became what we know today as churches. In this sense, then, the church consists of people not buildings. Fellowship, worship, and ministry are all conducted by people, not buildings. Church structures facilitate the role of God’s people, but they do not fulfill it.</p>
+    </div>
+    <button class="school-website-btn" onclick="window.location.href='https://bbms.net.in/'">My School Website</button>
+    <div class="image-container">
+        <img src="https://bbms.net.in/images/our-school/vice-principal.webp" alt="Vice Principal" style="width: 60%; border-radius: 8px; margin-top: 20px;" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">As the Vice-Principal of Bethel Baptist Mission School, Dhubri. I consider it my privilege to pen down my message for our newly launched website of our school. I feel very fortunate to work with many dedicated, committed, caring and innovative staff members, parents and students. Many people consider education as a medium of getting good jobs, living a royal life, earning money and much more. But education doesn't really mean this. Real meaning comes when one's way of thinking gets changed and one starts thinking for the betterment of the society, country and world at large. On the whole education means holistic development of a child not only restricted to the achievements</p>
+    </div>
+    <strong style="font-size: 24px; margin-top: 20px;">Our Teachers</strong>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Julfikar%20Ahmed.webp" alt="Julfikar Ahmed" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Julfikar Ahmed</p>
+    </div>
+    <!-- Add more teacher images and names below -->
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Amirul%20Khandakar.webp" alt="Amirul Khandakar" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Amirul Khandakar</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Durba%20SenGupta.webp" alt="Durba SenGupta" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Durba SenGupta</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Tapasya%20Ray.webp" alt="Tapasya Ray" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Tapasya Ray</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Elizabeth%20Kisku.webp" alt="Elizabeth Kisku" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Elizabeth Kisku</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Oseefa%20Talukdar.webp" alt="Oseefa Talukdar" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Oseefa Talukdar</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Basudev%20Saha.webp" alt="Basudev Saha" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Basudev Saha</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/K%20Laldinthari.webp" alt="K Laldinthari" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">K Laldinthari</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Moses%20Barman.webp" alt="Moses Barman" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Moses Barman</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Afsana%20Rahman.webp" alt="Afsana Rahman" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Afsana Rahman</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Mostafizur%20Hussain.webp" alt="Mostafizur Hussain" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Mostafizur Hussain</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Rimpa%20Mahato.webp" alt="Rimpa Mahato" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Rimpa Mahato</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/lalnunmawii%20pachuau.webp" alt="lalnunmawii pachuau" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">lalnunmawii pachuau</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/k.%20lalzawmtluangi.webp" alt="k. lalzawmtluangi" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">k. lalzawmtluangi</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/B%20Lalzwnpui.webp" alt="B Lalzwnpui" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">B Lalzwnpui</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Tanmoy%20Saha.webp" alt="Tanmoy Saha" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Tanmoy Saha</p>
+    </div>
+    <div class="image-container">
+        <img class="teacher-image" src="https://bbms.net.in/images/teachers/Esther%20Mogar.webp" alt="Esther Mogar" loading="lazy">
+        <p style="font-size: 18px; text-align: center; margin-top: 10px;">Esther Mogar</p>
+    </div>
+</body>
+</html>
